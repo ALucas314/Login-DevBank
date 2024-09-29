@@ -34,7 +34,7 @@ export function Login() {
       const result = await signInWithPopup(auth, provider);
       if (result.user) {
         alert("Login com Google realizado com sucesso!");
-        window.location.href = "https://project-hoobank-main-olive.vercel.app/";
+        window.location.href = "https://dev-bank-uowg.vercel.app/";
       }
     } catch (error) {
       setFormError("Erro ao fazer login com o Google. Tente novamente.");
