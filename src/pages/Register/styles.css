@@ -1,0 +1,378 @@
+/* Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #041424;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container Principal */
+.container {
+  width: 95%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(145deg, #062a46, #041424);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.container .header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* eslint-disable */
+.container .header span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #c4cdfe, #9eb0ff);
+  -webkit-background-clip: text; /* eslint-disable-line */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5c73db; /* Cor de fallback para navegadores que não suportam o gradiente no texto */
+}
+
+/* Formulário */
+.container form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Input Container */
+.container form .inputContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container form .inputContainer label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.container form .inputContainer input {
+  padding: 16px;
+  width: 100%;
+  height: 49px;
+  border: 1px solid #5c73db;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #0a2a4b;
+  color: #fff;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.container form .inputContainer input:focus {
+  border-color: #4763e4;
+  outline: none;
+  box-shadow: 0 0 10px rgba(71, 99, 228, 0.5);
+}
+
+/* Estilo de Erro para Inputs */
+.error {
+  border: 1px solid #e63946 !important;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+}
+
+/* Mensagem de Erro */
+.error-message {
+  color: #e63946;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.container form a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.container form a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Link Esqueceu sua senha? */
+.forgot-password {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5c73db; /* Cor do texto */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Botão */
+.container form .button {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(145deg, #4763e4, #5c73db);
+  border-radius: 12px;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Adiciona espaçamento entre os botões */
+}
+
+.container form .button:hover {
+  background: linear-gradient(145deg, #5c73db, #4763e4);
+  box-shadow: 0 0 10px rgba(71, 99, 228, 0.5);
+  opacity: 0.9;
+}
+
+/* Botão do Google */
+.container form .button.google {
+  background: #4285f4; /* Cor do botão Google */
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container form .button.google:hover {
+  background: #357ae8; /* Cor de hover do botão Google */
+}
+
+/* Botão dentro do Link */
+.button-link {
+  display: inline-block;
+  width: 100%;
+}
+
+.button-link .button {
+  width: 100%;
+}
+
+/* Footer */
+.container form .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.container form .footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.container form .footer a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
+  color: #5c73db;
+  transition: color 0.3s ease;
+}
+
+.container form .footer a:hover {
+  color: #ffffff;
+}
+
+/* Campo de Recuperação de Senha */
+.password-reset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  background: #0a2a4b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.password-reset h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.password-reset input {
+  padding: 16px;
+  width: 100%;
+  height: 49px;
+  border: 1px solid #5c73db;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #0a2a4b;
+  color: #fff;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.password-reset input:focus {
+  border-color: #4763e4;
+  outline: none;
+  box-shadow: 0 0 10px rgba(71, 99, 228, 0.5);
+}
+
+.password-reset button {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(145deg, #4763e4, #5c73db);
+  border-radius: 12px;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.password-reset button:hover {
+  background: linear-gradient(145deg, #5c73db, #4763e4);
+  box-shadow: 0 0 10px rgba(71, 99, 228, 0.5);
+  opacity: 0.9;
+}
+
+.white-link {
+  color: #ffffff; /* Define a cor do texto como branco */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease; /* Adiciona um efeito de transição suave */
+}
+
+.white-link:hover {
+  color: #e0e0e0; /* Define a cor do texto ao passar o mouse */
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Ajusta a largura para se adaptar melhor à tela */
+    max-width: none; /* Remove a largura máxima para permitir o ajuste */
+    padding: 20px;
+  }
+
+  .container .header span {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .container form .inputContainer input,
+  .container form .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%; /* Ajusta a largura para se adaptar melhor à tela */
+    padding: 15px;
+  }
+
+  .container .header span {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .container form .inputContainer label,
+  .container form a,
+  .container form .footer p,
+  .container form .footer a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 100%; /* Ajusta a largura para ocupar toda a tela */
+    padding: 10px;
+  }
+
+  .container .header span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .container form .inputContainer label,
+  .container form a,
+  .container form .footer p,
+  .container form .footer a {
+    font-size: 12px;
+  }
+}
